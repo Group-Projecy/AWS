@@ -1,0 +1,28 @@
+
+
+**AWS Instance setup with commands
+
+**installing apache webserver
+
+sudo apt-get update
+
+sudo apt-get install apache2
+
+y (for additional space)
+
+
+** add public DNS to conf file
+
+sudo vim/ect/apche2/apache2.conf
+
+**add a server name
+
+ServerName = publicDNS from instance
+
+** check if config has work
+
+sudo apache2ctl configtest
+
+** restart apache
+
+sudo systemctI restart apache2
