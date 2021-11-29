@@ -1,0 +1,17 @@
+**Having aquired the EZ home domain from FreeNom, we must create a 
+hosted zone using the domain: EzHome.gq
+
+**we have managed the name servers with our ez home custom names. 
+
+**Also we linked the domains with the IP address
+
+** Then we enabled users who enter EzHome.gq into their web broswer
+to be routed to our AWS server. We creates 2 simple record within AWS
+adding the public IP4 of the instance. we created a EzHome.gq and www.EzHome.gq record.
+
+
+
+
+
+
+
