@@ -1,0 +1,40 @@
+***Allowing flask and apache to talk to eachother we must install wsgi (ubuntu)
+
+sudo apt-get install libapache2-mod-wsgi python3-dev
+
+** to update security patches
+sudo apt-get update 
+
+sudo apt-get install python3-pip
+
+** install flask
+sudo pip3 install Flask
+
+**added new directly to www.
+
+sudo mdkir FlaskApp
+
+cd FlaskApp
+
+** using winscp. we want to connect to a new site. Add the instance public DNS from AWS.
+Port 22. Select advanced, SSH, and upload AWS private key. (.PPK file)
+
+** inside the hosted zone we edited the route traffic ip. adding in the  instance ip.
+
+**in putty, we connect using the new ip address. We then edit the servername.
+vim /etc/apache2/apache2.conf
+
+** then we must allow permit login for winscp
+
+sudo vim/etc/ssh/sshd_config
+permitRootLogin yes
+
+** change the root password
+
+** we now have to allow the root user to make ssh connects
+
+sudo cp/home/ubuntu/.ssh/authorised_key /root/.shh
+
+then reboot machine
+
+** we now are able to transfer our Ez home files using winscp.
